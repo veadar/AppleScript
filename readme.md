@@ -9,3 +9,19 @@ Growlがインストールされていないと、display dialogで表示しま�
 変数をファイルに書き出します。
 
 テキストエディットなどを使わずファイルが作成できます。
+
+#deleteEmptyLine.applescript
+
+指定されたテキストを改行ごとに配列に格納します。
+
+空行は除外
+
+#replaceText.applescript
+
+delimitersを利用して検索&置換
+
+#getMytemItemFolder.applescript
+
+テンポラリフォルダをなければ作成
+
+元からあれば何もせずそのフォルダの場所のエイリアスを返す
