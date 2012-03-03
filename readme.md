@@ -33,3 +33,7 @@ delimitersを利用して検索&置換
 #convertDate
 
 AppleScript独特の日付表記をyyyy/mm/dd形式に変換します
+
+#runningProcess.applescript
+
+指定した文字列のプロセスが起動していればtrueを返します。
