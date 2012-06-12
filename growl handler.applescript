@@ -14,14 +14,14 @@ on notification(ntext, selectNotification) --ntext=display text selectNotificati
 	
 	if GrowlRunning() then
 		
-		tell application "GrowlHelperApp"
+		tell application "Growl"
 			register as application Ê
 				growlAppName all notifications allNotification Ê
 				default notifications defaultNotification Ê
 				icon of application growlIcon
 		end tell
 		
-		tell application "GrowlHelperApp"
+		tell application "Growl"
 			notify with name Ê
 				selectNotification title Ê
 				growlTitle description Ê
@@ -33,10 +33,34 @@ on notification(ntext, selectNotification) --ntext=display text selectNotificati
 	end if
 end notification
 
-on GrowlRunning() --if growl activate return true
-	tell application "System Events"
-		set isRunning to Ê
-			(count of (every process whose name is "GrowlHelperApp")) > 0
-		return isRunning
-	end tell
+on GrowlRunning()
+	
+	if runningProcess("GrowlHelperApp") then
+		
+		return true
+		
+	else if runningProcess("Growl") then
+		
+		return true
+		
+	else
+		
+		return false
+		
+	end if
+	
 end GrowlRunning
+
+on runningProcess(appName) --return true or false
+	
+	tell application "System Events"
+		
+		if application process appName exists then
+			return true
+		else
+			return false
+		end if
+		
+	end tell
+	
+end runningProcess

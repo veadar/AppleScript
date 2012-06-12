@@ -4,6 +4,21 @@ if runningProcess("Finder") then
 	beep
 end if
 
+on runningProcess(appName) --return true or false
+	
+	tell application "System Events"
+		
+		if application process appName exists then
+			return true
+		else
+			return false
+		end if
+		
+	end tell
+	
+end runningProcess
+
+(*
 
 on runningProcess(appName) --return true or false
 	
@@ -18,3 +33,5 @@ on runningProcess(appName) --return true or false
 	end if
 	
 end runningProcess
+
+*)
