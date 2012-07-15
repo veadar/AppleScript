@@ -1,14 +1,15 @@
 property msg1 : "display dialog return to answer"
-property msg2 : "display dialog return to button"
+property defaultAnswer1 : "default answer"
 
+property msg2 : "display dialog return to button"
 property buttonList : {"button1", "button2", "button3"}
 
-dda(msg1)
+dda(msg1, defaultAnswer1)
 
 ddb(msg2, buttonList)
 
-on dda(msg)
-	display dialog msg default answer "" buttons {"OK"} default button 1
+on dda(msg, defaultAnswer)
+	display dialog msg default answer defaultAnswer buttons {"OK"} default button 1
 	return text returned of result
 end dda
 
