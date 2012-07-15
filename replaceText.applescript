@@ -18,3 +18,9 @@ on replaceText(theText, serchStr, replaceStr)
 	set AppleScript's text item delimiters to tmp
 	return theText
 end replaceText
+
+(*
+on replaceText(theText, serchStr, replaceStr)
+	do shell script "echo " & quoted form of theText & " |  sed -e  's/" & serchStr & "/" & replaceStr & "/g'"
+end replaceText
+*)
