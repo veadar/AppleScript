@@ -37,3 +37,13 @@ AppleScript独特の日付表記をyyyy/mm/dd形式に変換します
 #runningProcess.applescript
 
 指定した文字列のプロセスが起動していればtrueを返します。
+
+#display dialog handler.applescript
+
+display dialogに関するハンドラ。
+
+answerとボタンの返り値を返します。
+
+#useKeychain.applescript
+
+パスワードをキーチェーンに保存して再利用します。
