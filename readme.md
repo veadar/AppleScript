@@ -51,3 +51,7 @@ answerとボタンの返り値を返します。
 #useKeychain.applescript
 
 パスワードをキーチェーンに保存して再利用します。
+
+#OSVersionCheck.applescript
+
+OSのバージョンの最後の数字だけを返します。
