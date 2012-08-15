@@ -4,6 +4,10 @@ Growlのハンドラがあったら便利だと思い作成。
 
 Growlがインストールされていないと、display dialogで表示します。
 
+#growl handler2.applescript
+
+growl handlerにURL Scheme機能を付けました。
+
 #write text to file.applescript
 
 変数をファイルに書き出します。
