@@ -7,20 +7,20 @@ property growlIcon : "Finder" --Growl Icon
 
 --End setup
 
-notification("í ím", "Title", "honbun", "http://growl.info") --use example
+notification("í ím", "Title", "honbun", "ical://") --use example
 
 on notification(selectNotification, growlTitle, notificationText, callbackURL) --notificationText=display text , selectNotification=notification name
 	
 	if GrowlRunning() then
 		
-		tell application "Growl"
+		tell application id "com.Growl.GrowlHelperApp"
 			register as application Å 
 				growlAppName all notifications allNotification Å 
 				default notifications defaultNotification Å 
 				icon of application growlIcon
 		end tell
 		
-		tell application "Growl"
+		tell application id "com.Growl.GrowlHelperApp"
 			notify with name Å 
 				selectNotification title Å 
 				growlTitle description Å 
