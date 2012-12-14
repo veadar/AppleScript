@@ -11,14 +11,14 @@ on splitWord(theText, theNumber)
 	
 	set repeatNumber to totalNumber div splitNumber
 	
-	set returnList to {}
+	set wordList to {}
 	
 	set startNumber to 1
 	
 	repeat repeatNumber times
-		set end of returnList to characters startNumber thru {(startNumber + splitNumber) - 1} of theText as text
+		set end of wordList to characters startNumber thru {(startNumber + splitNumber) - 1} of theText as text
 		set startNumber to startNumber + splitNumber
 	end repeat
 	
-	return returnList
+	return wordList
 end splitWord
