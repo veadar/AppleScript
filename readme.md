@@ -55,3 +55,7 @@ answerとボタンの返り値を返します。
 #OSVersionCheck.applescript
 
 OSのバージョンの最後の数字だけを返します。
+
+#splitWord.applescript
+
+指定した文章を指定した文字数で区切り、配列に格納します。
