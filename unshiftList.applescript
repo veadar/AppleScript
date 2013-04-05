@@ -15,7 +15,7 @@ set hoge to unshiftList(hoge, 6, 5)
 
 on unshiftList(theList, theText, maxSize)
 	
-	set theList to (theText as list) & theList
+	set theList to {theText} & theList
 	
 	if length of theList > maxSize then
 		
