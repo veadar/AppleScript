@@ -59,3 +59,7 @@ OSのバージョンの最後の数字だけを返します。
 #splitWord.applescript
 
 指定した文章を指定した文字数で区切り、配列に格納します。
+
+#extractURL.applescript
+
+HTMLソースから特定の語を含んだリンクを抽出
