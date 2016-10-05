@@ -5,33 +5,17 @@ if runningProcess("Finder") then
 end if
 
 on runningProcess(appName) --return true or false
-	
-	tell application "System Events"
-		
-		if application process appName exists then
-			return true
-		else
-			return false
-		end if
-		
-	end tell
-	
+	try
+		application appName is running
+	on error -- for can not use "is running"
+		tell application "System Events"
+			
+			if application process appName exists then
+				return true
+			else
+				return false
+			end if
+			
+		end tell
+	end try
 end runningProcess
-
-(*
-
-on runningProcess(appName) --return true or false
-	
-	tell application "System Events"
-		set appList to name of (application processes)
-	end tell
-	
-	if appList contains appName then
-		return true
-	else
-		return false
-	end if
-	
-end runningProcess
-
-*)
