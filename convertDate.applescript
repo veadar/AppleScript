@@ -1,5 +1,7 @@
 current date -->"2012”N1ŒŽ18“ú…—j“ú 16:00:00"
 
+test
+
 convertDate(result) -->"2012/1/18"
 
 on convertDate(myDate)
